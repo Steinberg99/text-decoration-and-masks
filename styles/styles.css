@@ -1,0 +1,134 @@
+*,
+html {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: Arial;
+}
+
+section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100vw;
+  height: 100vh;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+/* Text decoration */
+
+.text-decoration > li:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.text-decoration > li:first-child {
+  text-decoration: underline;
+}
+
+.text-decoration > li:nth-child(2) {
+  text-decoration: overline;
+}
+
+.text-decoration > li:nth-child(3) {
+  text-decoration: underline;
+  text-decoration-style: wavy;
+}
+
+.text-decoration > li:nth-child(4) {
+  text-decoration: overline;
+  text-decoration-style: wavy;
+}
+
+.text-decoration > li:nth-child(5) {
+  color: blue;
+
+  text-decoration: underline;
+  text-decoration-color: red;
+}
+
+.text-decoration > li:nth-child(6) {
+  text-decoration: underline overline;
+}
+
+.text-decoration > li:nth-child(7) {
+  text-decoration: underline;
+  text-decoration-color: transparent;
+
+  transition: text-decoration-color 300ms ease-in-out;
+}
+
+.text-decoration > li:nth-child(7):hover {
+  text-decoration-color: black;
+}
+
+.text-decoration > li:nth-child(8) {
+  color: transparent;
+
+  text-decoration: underline;
+  text-decoration-style: wavy;
+  text-decoration-color: blue;
+  text-decoration-thickness: 0.5rem;
+
+  text-underline-offset: 0.5rem;
+}
+
+/* Mask */
+
+.mask-image {
+  height: 500px;
+  width: 500px;
+
+  -webkit-mask-image: url("https://upload.wikimedia.org/wikipedia/commons/0/00/HTML5_logo_black.svg");
+  -webkit-mask-size: cover;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+}
+
+/* Clip path & mask */
+
+.clip-image-1 {
+  height: 500px;
+  width: 500px;
+
+  clip-path: polygon(
+    50% 0%,
+    90% 20%,
+    100% 60%,
+    75% 100%,
+    25% 100%,
+    0% 60%,
+    10% 20%
+  );
+
+  transition: 300ms ease-in-out;
+}
+
+.clip-image-1:hover {
+  clip-path: polygon(
+    0% 20%,
+    60% 20%,
+    60% 0%,
+    100% 50%,
+    60% 100%,
+    60% 80%,
+    0% 80%
+  );
+}
+
+.clip-image-2 {
+  height: 500px;
+  width: 500px;
+
+  clip-path: url(#clip);
+}

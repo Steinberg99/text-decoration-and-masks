@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/styles.css" />
+  </head>
+  <body>
+    <main>
+      <section>
+        <ul class="text-decoration">
+          <li>This is a piece of text with an underline.</li>
+
+          <li>This is a piece of text with an overline.</li>
+
+          <li>This is a piece of text with an underline that is wavy.</li>
+
+          <li>This is a piece of text with an overline that is wavy.</li>
+
+          <li>This is a piece of text with two different colors.</li>
+
+          <li>
+            This is a piece of text with two different types of text-decoration.
+          </li>
+
+          <li>Hover.</li>
+
+          <li>
+            This is a hidden piece of text with an underline that is wavy and
+            thick.
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <img class="mask-image" src="./img/bitcoin.jpeg" />
+      </section>
+
+      <section>
+        <svg>
+          <defs>
+            <linearGradient
+              id="gradient"
+              x1="0%"
+              y1="0%"
+              x2="100%"
+              y2="0%"
+              spreadMethod="pad"
+            >
+              <stop offset="0%" stop-color="#ffffff" stop-opacity="1" />
+              <stop offset="100%" stop-color="#000000" stop-opacity="1" />
+            </linearGradient>
+
+            <pattern
+              id="pattern"
+              x="10"
+              y="10"
+              width="20"
+              height="20"
+              patternUnits="userSpaceOnUse"
+            >
+              <circle
+                cx="10"
+                cy="10"
+                r="10"
+                style="stroke: none; fill: #0000ff"
+              />
+            </pattern>
+
+            <mask id="mask" x="0" y="0" width="200" height="100">
+              <rect
+                x="0"
+                y="0"
+                width="200"
+                height="100"
+                style="stroke: none; fill: url(#gradient)"
+              />
+            </mask>
+          </defs>
+
+          <rect
+            x="1"
+            y="1"
+            width="200"
+            height="100"
+            style="stroke: none; fill: url(#pattern); mask: url(#mask)"
+          />
+        </svg>
+      </section>
+
+      <section>
+        <img class="clip-image-1" src="./img/bitcoin.jpeg" />
+      </section>
+
+      <section>
+        <img class="clip-image-2" src="./img/bitcoin.jpeg" />
+
+        <svg width="0" height="0">
+          <defs>
+            <clipPath id="clip">
+              <circle cx="250" cy="250" r="200" />
+
+              <circle cx="100" cy="100" r="100" />
+
+              <circle cx="400" cy="100" r="100" />
+            </clipPath>
+          </defs>
+        </svg>
+      </section>
+    </main>
+  </body>
+</html>
